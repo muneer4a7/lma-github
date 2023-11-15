@@ -1,0 +1,26 @@
+node {
+    stage('Build') {
+        echo 'Building...'
+        sh 'lsblk'
+        sh 'blkid'
+        echo 'Building Completed...'
+    }
+
+    stage('Test') {
+        echo 'Testing...'
+        sh 'sudo fdisk -l' 
+        sh 'mkdir dir101'
+        echo 'Testing Completed...'
+    }
+
+    stage('Deploy') {
+        echo 'Deploying...'
+        sh 'cd dir100'
+        sh 'touch file{1..5}'
+        echo 'Deploying Completed...'
+    }
+
+    stage('Release') {
+        echo 'Release Completed...'
+    }
+}
