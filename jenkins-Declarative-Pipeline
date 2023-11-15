@@ -15,7 +15,7 @@ node {
 
     stage('Deploy') {
         echo 'Deploying...'
-        sh 'cd dir100'
+        sh 'cd dir101'
         sh 'touch file{1..5}'
         echo 'Deploying Completed...'
     }
