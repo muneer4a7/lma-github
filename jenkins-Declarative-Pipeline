@@ -9,7 +9,7 @@ node {
     stage('Test') {
         echo 'Testing...'
         sh 'sudo fdisk -l' 
-        sh 'mkdir dir101'
+        sh 'mkdir -p dir101'
         echo 'Testing Completed...'
     }
 
